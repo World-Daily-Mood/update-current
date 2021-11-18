@@ -1,6 +1,5 @@
 import json
 import mysql.connector
-from numpy.core.defchararray import array
 
 configfile = "./config.json"
 
@@ -33,7 +32,7 @@ def main(event = None, context = None):
         
         return moods_arr
 
-    def get_best_mood(all_moods: array):
+    def get_best_mood(all_moods: list):
         return max(all_moods)
 
     def set_current(mood: str):
